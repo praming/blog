@@ -4,13 +4,19 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run postbuild",
+    "postbuild": "node scripts/process-css.js",
+    "deploy": "node scripts/deploy.js",
+    "deploy:force": "node scripts/deploy.js --force",
+    "deploy:subtree": "git subtree push --prefix dist origin gh-pages",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.5.1",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.5",
+    "glob": "^11.0.3",
     "tailwindcss": "^4.1.13"
   }
 }

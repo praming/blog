@@ -1,23 +1,13 @@
 ---
-import '../styles/global.css';
+import Layout from "@/layouts/Layout.astro";
+// const pageTitle = "首页";
+
 ---
 
+<Layout>
+  <h1>关于我</h1>
+  <h2>……和我的新 Astro 网站！</h2>
 
-
-<html lang="zh">
-  <head>
-	<meta charset="utf-8" />
-    <title>我的 Astro 网站</title>
-  </head>
-  <body class="bg-gray-100">
-    <header class="bg-white shadow-md">
-      <h1 class="text-3xl font-bold text-center text-blue-600 py-4 bg-amber-300">欢迎来到我的网站</h1>
-    </header>
-    <main class="container mx-auto px-4 py-8">
-      <p class="text-lg text-gray-700">这是一个使用 Astro 和 Tailwind CSS 构建的页面。</p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-        点击我
-      </button>
-    </main>
-  </body>
-</html>
+  <h1 class="bg-red-50">Astro</h1>
+  <h1>我的 Astro 站点</h1>
+</Layout>

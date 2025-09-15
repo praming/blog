@@ -1,0 +1,18 @@
+---
+import Head from '@/components/Head.astro';	// 头部
+import Header from '@/components/Header.astro'; // 顶部
+import Footer from '@/components/Footer.astro';	// 底部
+
+const { title, keywords, description, pagecover, activeNav, Home } = Astro.props; // 属性
+// 基础 样式
+import "@/styles/global.css";
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<Head />
+	<Header />
+	<body>
+		<slot />
+		<Footer />
+	</body>
+</html>
